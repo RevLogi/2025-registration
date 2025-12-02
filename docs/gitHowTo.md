@@ -32,7 +32,7 @@ git clone 你的仓库地址(在你的Github页面上复制)
 虽然在自己的仓库里可以直接在主分支开发，但为了保持良好的习惯，建议为你的打卡创建一个新分支：
 
 ```bash
-git checkout -b feat/你的名字
+git checkout -b 你的名字
 ```
 
 ### 5. 添加个人信息
@@ -60,7 +60,7 @@ git commit -m "add member: 你的名字"
 ### 7. 推送分支
 将你的分支推送到**你的**远程仓库（Fork出来的那个）：
 ```bash
-git push origin feat/你的名字
+git push origin 你的名字
 ```
 
 > Q: 什么是`origin`？
@@ -70,7 +70,7 @@ git push origin feat/你的名字
 1. 打开 Github 页面（你的仓库或原仓库均可）。
 2. 你通常会看到一个黄色的提示框 "Compare & pull request"。
 3. 如果没有，点击 "Pull requests" -> "New pull request"。
-4. 确保左边是 **原仓库的 main 分支**，右边是 **你的仓库的 feat/你的名字 分支**。
+4. 确保左边是 **原仓库的 main 分支**，右边是 **你的仓库的 你的名字 分支**。
 5. 点击 "Create pull request"，写点骚话，然后提交。
 6. 等待管理员审核合并（Merge）。
 
@@ -89,7 +89,7 @@ git checkout main
 git merge upstream/main
 
 # 4. 如果你在开发分支，也可以合并主分支的更新
-git checkout feat/你的名字
+git checkout 你的名字
 git merge main
 ```
 
@@ -113,7 +113,7 @@ git clone git@github.com:你的用户名/2025-registration.git
 
 创建一个新分支
 ```bash
-git checkout -b feat/wdlin
+git checkout -b wdlin
 ```
 
 #### Step 4
@@ -133,7 +133,7 @@ git commit -m "add member wdlin"
 
 推送分支
 ```bash
-git push origin feat/wdlin
+git push origin wdlin
 ```
 
 #### Step 7
