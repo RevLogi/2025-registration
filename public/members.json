@@ -1,5 +1,20 @@
 [
   {
+    "id": "molinwu",
+    "name": "molinwu",
+    "bio": "这个人很懒，什么都没有留下🐧",
+    "tags": [
+      "Linux",
+      "OS",
+      "Rust"
+    ],
+    "social": {
+      "github": "wamingmo",
+      "blog": "https://wamingmo.github.io/"
+    },
+    "avatarUrl": "avatars/molinwu.jpg"
+  },
+  {
     "id": "wdlin",
     "name": "wdlin",
     "bio": "Touching fish!",
