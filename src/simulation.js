@@ -27,7 +27,10 @@ export async function initSimulation(canvas) {
     Composite.add(engine.world, walls);
 
     // 3. 加载数据并生成球体
-    const res = await fetch('/members.json');
+    const baseUrl = import.meta.env.BASE_URL;
+    const dataUrl = baseUrl.endsWith('/') ? `${baseUrl}members.json` : `${baseUrl}/members.json`;
+    
+    const res = await fetch(dataUrl);
     const members = await res.json();
     
     const balls = await Promise.all(members.map(async (m) => {
@@ -35,7 +38,11 @@ export async function initSimulation(canvas) {
         let img = null;
         if (m.avatarUrl) {
             img = new Image();
-            img.src = m.avatarUrl;
+            if (!m.avatarUrl.startsWith('/') && !m.avatarUrl.startsWith('http')) {
+                 img.src = baseUrl + m.avatarUrl;
+            } else {
+                 img.src = m.avatarUrl;
+            }
             await new Promise(r => img.onload = r); // 等待加载完成以获取尺寸
         }
 

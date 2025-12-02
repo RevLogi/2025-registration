@@ -47,7 +47,8 @@ async function build() {
           path.join(folderPath, imageFile),
           path.join(outputAvatarDir, newFileName)
         );
-        avatarUrl = `/avatars/${newFileName}`;
+        // 使用相对路径，以便在不同 base 路径下都能正常工作
+        avatarUrl = `avatars/${newFileName}`;
       }
 
       members.push({
