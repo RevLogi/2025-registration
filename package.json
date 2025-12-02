@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^7.2.4"
+    "vite": "^5.4.11"
   },
   "dependencies": {
     "fs-extra": "^11.3.2",
